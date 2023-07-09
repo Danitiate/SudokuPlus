@@ -1,0 +1,191 @@
+﻿<Window x:Class="SudokuPlus.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SudokuPlus"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="800" MinWidth="750" MinHeight="450">
+    <Border Padding="20" Margin="0,0,-12,-16">
+        <StackPanel>
+            <Label Content="00:00" FontWeight="Light" FontSize="22" Margin="150,5,5,5"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition />
+                    <ColumnDefinition />
+                </Grid.ColumnDefinitions>
+
+                <!--#region Sudoku Grid-->
+                <Grid x:Name="SudokuGrid" Grid.Column="0">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                        <ColumnDefinition Width="40"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                        <RowDefinition Height="40"/>
+                    </Grid.RowDefinitions>
+
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="0" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="1" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="2" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="3" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="4" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="5" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="6" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="7" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="0" Grid.Column="8" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="0" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="1" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="2" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="3" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="4" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="5" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="6" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="7" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="1" Grid.Column="8" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="0" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="1" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="2" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="3" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="4" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="5" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="6" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="7" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="2" Grid.Column="8" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="0" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="1" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="2" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="3" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="4" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="5" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="6" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="7" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="3" Grid.Column="8" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="0" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="1" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="2" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="3" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="4" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="5" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="6" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="7" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="4" Grid.Column="8" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="0" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="1" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="2" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="3" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="4" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="5" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="6" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="7" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="5" Grid.Column="8" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="0" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="1" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="2" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="3" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="4" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="5" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="6" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="7" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="6" Grid.Column="8" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="0" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="1" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="2" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="3" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="4" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="5" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="6" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="7" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="7" Grid.Column="8" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="0" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="1" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="2" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="3" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="4" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="5" FontSize="20"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="6" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="7" FontSize="20" Background="#DDDDDD"/>
+                    <Label HorizontalContentAlignment="Center" BorderThickness="1" BorderBrush="Black" Grid.Row="8" Grid.Column="8" FontSize="20" Background="#DDDDDD"/>
+                </Grid>
+                <!--#endregion-->
+
+                <!--#region Control Grid-->
+                <Grid Grid.Column="1">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="2*"/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+
+                    <!--#region KeyPad-->
+                    <Border Grid.Row="0" Margin="50, 10">
+                        <Grid x:Name="KeyPad" >
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+
+                            <Button Content="1" Grid.Row="0" Grid.Column="0" Background="#DDDDDD" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="2" Click="KeyPadButtonClick" />
+                            <Button Content="2" Grid.Row="0" Grid.Column="1" Background="#DDDDDD" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="2" Click="KeyPadButtonClick" />
+                            <Button Content="3" Grid.Row="0" Grid.Column="2" Background="#DDDDDD" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="2" Click="KeyPadButtonClick" />
+                            <Button Content="4" Grid.Row="1" Grid.Column="0" Background="#DDDDDD" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="2" Click="KeyPadButtonClick" />
+                            <Button Content="5" Grid.Row="1" Grid.Column="1" Background="#DDDDDD" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="2" Click="KeyPadButtonClick" />
+                            <Button Content="6" Grid.Row="1" Grid.Column="2" Background="#DDDDDD" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="2" Click="KeyPadButtonClick" />
+                            <Button Content="7" Grid.Row="2" Grid.Column="0" Background="#DDDDDD" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="2" Click="KeyPadButtonClick" />
+                            <Button Content="8" Grid.Row="2" Grid.Column="1" Background="#DDDDDD" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="2" Click="KeyPadButtonClick" />
+                            <Button Content="9" Grid.Row="2" Grid.Column="2" Background="#DDDDDD" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="2" Click="KeyPadButtonClick" />
+                            <Button Content="UNDO" Grid.Row="3" Grid.Column="0" Background="#DDDDDD" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="2" Click="KeyPadButtonClick" IsEnabled="False"/>
+                            <Button Content="DEL" Grid.Row="3" Grid.Column="1" Background="#DDDDDD" FontSize="18" FontWeight="Bold" BorderBrush="Black" BorderThickness="2" Click="KeyPadButtonClick" />
+                        </Grid>
+                    </Border>
+                    <!--#endregion-->
+
+                    <!--#region Output and Solvers-->
+                    <Border Grid.Row="1" Margin="20">
+                        <Label x:Name="Result" FontSize="16" VerticalContentAlignment="Center" HorizontalContentAlignment="Center"/>
+                    </Border>
+
+                    <Border Grid.Row="2" Margin="45, 20">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Button BorderThickness="2" FontWeight="Bold" Content="Check" Grid.Column="0" Margin="5,-1,5,1" Click="CheckButtonClick"/>
+                            <Button BorderThickness="2" FontWeight="Bold" Content="Solve 1" Grid.Column="1" Margin="5,0,5,0"/>
+                            <Button BorderThickness="2" FontWeight="Bold" Content="Solve All" Grid.Column="2" Margin="5,0,5,0" Click="SolveAllButtonClick"/>
+                        </Grid>
+                    </Border>
+
+                    <!--#endregion-->
+                </Grid>
+                <!--#endregion-->
+            </Grid>
+        </StackPanel>
+    </Border>
+</Window>
